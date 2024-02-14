@@ -1,0 +1,7 @@
+16/01/2024 19:40:03 - root - INFO - Aliaksei has logged in successfully !!
+16/01/2024 19:40:03 - root - ERROR - Exception Occurred
+Traceback (most recent call last):
+  File "C:\Users\aleks\CodeAcademy\pythonProject\logging_lesson.py", line 36, in <module>
+    c = a / b
+        ~~^~~
+ZeroDivisionError: division by zero

@@ -1,0 +1,12 @@
+16/01/2024 21:34:27 - root - DEBUG - This is Debug Message
+16/01/2024 21:34:27 - root - DEBUG - 1, <class 'int'>
+16/01/2024 21:34:27 - root - DEBUG - 2, <class 'int'>
+16/01/2024 21:34:27 - root - DEBUG - 2.5, <class 'float'>
+16/01/2024 21:34:27 - root - DEBUG - a, <class 'str'>
+16/01/2024 21:34:27 - root - INFO - a is not a number: <class 'str'>
+16/01/2024 21:34:27 - root - DEBUG - 1, <class 'int'>
+16/01/2024 21:34:27 - root - DEBUG - 2, <class 'int'>
+16/01/2024 21:34:27 - root - DEBUG - 2.5, <class 'float'>
+16/01/2024 21:34:27 - root - DEBUG - a, <class 'str'>
+16/01/2024 21:34:27 - root - INFO - a is not a number: <class 'str'>
+16/01/2024 21:34:27 - root - ERROR - The list is less than 10 elements long
