@@ -34,4 +34,4 @@ def make_greeting(name, age=None):
         return f"Whoa {name}! {age} already, you're growing up!"
 
 # Test the implementation
-print(make_greeting("Benjamin"))
+print(make_greeting(name="Benjamin", age="36"))
