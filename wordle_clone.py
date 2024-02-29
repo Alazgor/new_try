@@ -2,37 +2,43 @@ import random
 from colorama import Fore, Style
 
 # List of words for the game
-words = ["apple", "banana", "cherry", "orange", "grape", "lemon", "kiwi"]
-
-# Function to choose a random word from the list
+words = ["apple", "banana", "cherry", "orange", "grape", "lemon", "kiwi", "peach", "pear", "plum", "mango",
+         "papaya", "pineapple", "watermelon", "strawberry", "raspberry", "blueberry"]
+# You have 6 attempts and 16 words to guessing the correct word
 def choose_word():
+    """Choose a random word from the list."""
     return random.choice(words)
-
-# Function to check the guess against the chosen word
+# random word choising
 def check_guess(word, guess):
-    guess = guess.ljust(len(word))  # Pad guess with spaces if it's shorter than the word
+    """Check the guess against the chosen word and calculate feedback."""
+    guess = guess[:len(word)].ljust(len(word), ' ')  # Truncate or pad guess to match word length
     correct_positions = sum(1 for i in range(len(word)) if word[i] == guess[i])
     correct_letters = sum(min(word.count(letter), guess.count(letter)) for letter in set(guess))
     return correct_positions, correct_letters - correct_positions
 
+# logic of guessing
 
-# Function to print feedback for the guess
 def print_feedback(word, guess):
-    for i in range(len(word)):
+    """Print feedback for the guess, highlighting correct positions and letters."""
+    min_length = min(len(word), len(guess))
+    for i in range(min_length):
         if word[i] == guess[i]:
-            print(Fore.GREEN + guess[i], end="")
+            print(Fore.GREEN + guess[i], end="")  # Green for correct positions
         elif guess[i] in word:
-            print(Fore.YELLOW + guess[i], end="")
+            print(Fore.YELLOW + guess[i], end="")  # Yellow for correct letters in wrong positions
         else:
-            print(Fore.RED + guess[i], end="")
+            print(Fore.RED + guess[i], end="")  # Red for incorrect letters
     print(Style.RESET_ALL)
 
-# Main function to play the game
+# here a rules to guessing letters
 def main():
+    """Main function to play the Wordle game."""
     word = choose_word()
     attempts = 6
     print("Welcome to Wordle!")
-    print("Guess the word. You have 6 attempts.")
+    print(f"Guess the word. You have {attempts} attempts.")
+    print(f"Rules: You need to guess the name of a fruit within {attempts} attempts. The word contains {len(word)} letters.")
+    print("Feedback: Green letters indicate correct positions, yellow letters indicate correct letters in wrong positions, and red letters indicate incorrect letters.")
 
     while attempts > 0:
         print(f"Attempts left: {attempts}")
