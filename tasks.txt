@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Do dishes",
+        "priority": 2,
+        "deadline": "2024-02-24 12:00"
+    },
+    {
+        "name": "Do laundry",
+        "priority": 1,
+        "deadline": "2024-02-24 11:00"
+    },
+    {
+        "name": "Call grandma",
+        "priority": 2,
+        "deadline": "2024-02-24 16:00"
+    }
+]
