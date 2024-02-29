@@ -10,10 +10,12 @@ def load_tasks():
     except FileNotFoundError:
         return []
 
-# Function to save tasks to file
-def save_tasks(tasks):
+# Function to save tasks to a text file
+def save_tasks_to_text(tasks):
     with open("tasks.txt", "w") as file:
-        json.dump(tasks, file)
+        for task in tasks:
+            file.write(f"{task['name']}|{task['priority']}|{task['deadline']}\n")
+
 
 # Function to add a task
 def add_task(name, priority, deadline):
@@ -73,3 +75,17 @@ elif args.edit:
 else:
     print("No valid command provided. Please provide a valid command.")
     parser.print_help()
+
+# how to use the programm - run this in terminal like this:
+# python list_of_your_tasks.py --add "Do dishes" --priority 2 --deadline "2024-02-24 12:00"
+# python list_of_your_tasks.py --add "Do dishes" 2 "2024-02-24 12:00"
+# python list_of_your_tasks.py --add "Do laundry" 1 "2024-02-24 11:00"
+# python list_of_your_tasks.py --add "Call grandma" 2 "2024-02-24 15:00"
+# python list_of_your_tasks.py --delete 1
+# python list_of_your_tasks.py --delete
+# python list_of_your_tasks.py --edit "Call grandma" "Call mom" 3 "2024-02-25 17:00"
+
+# text file with list of tasks can find in this directory:
+# bash terminal
+# cd C:\Users\aleks\CodeAcademy\pythonProject
+# Invoke-Item .\tasks.txt
