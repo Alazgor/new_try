@@ -59,7 +59,7 @@ with open("Text.txt", 'r+') as file:
         file.write(f"{i}. {line}")
 
 # Replacing the line "Beautiful is better than ugly."
-replace_first_occurrence("Text.txt", "Красивое лучше, чем уродливое", "Beautiful is better than ugly.")
+replace_first_occurrence("Text.txt", "Gražu yra geriau nei negražu", "Beautiful is better than ugly.")
 
 # Printing the text of the file in reverse order
 print("\nText from created file in reverse:")
