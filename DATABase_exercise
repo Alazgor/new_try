@@ -1,0 +1,15 @@
+[Вчера 21:11] Paulius Skaisgiris
+Show first name, last name, plate number of each car owner
+Last names, car make, car year of all owners
+First name, car make, phone number for all male customers. Order the result in a descending alphabetical manner
+The phone numbers of all car owners whose cars are between 2010 and 2020
+Count the makes of all cars
+Count the amount of which gender customers our car wash db has
+
+Difficult:
+Write a function that creates fake data for your database (for example, generate names, last names, phone numbers,cars info, etc). At first, don't worry about the fact that the names are random collection of letters "ksdfjhasdAASD". Later, think about how this could be improved and actual names be generated. Perhaps make a fixed list of names, last names, car makes, models to choose from and generate pick them randomly
+
+Select all customers and their corresponding car information (if any)
+Find all customers who own a car made before a specific year (e.g., 2000).
+Find all female customers with a phone number starting with a specific code (e.g., 370).
+Get the full names (first and last) of customers and the model year of their car (if any), sorted by year (ascending)
